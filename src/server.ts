@@ -14,6 +14,10 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3333;
 
+app.get("/", (req, res) => {
+  res.json({ message: "🏓 Pong! O servidor está rodando!" });
+});
+
 app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
